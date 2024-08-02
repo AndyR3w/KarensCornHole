@@ -7,7 +7,9 @@
 .button-container {
     display: flex;
     flex-grow: 1;
-    justify-content: space-between;
+    /*justify-content: space-between;*/
+    justify-content: right;
+    gap: 40px;
 }
 
 body, html {
@@ -55,22 +57,17 @@ button {
     opacity: 0;
 }
 
-.headerButton:hover::before {
+.headerButton:hover::before,
+.headerButton.active::before {
     opacity: 1;
 }
 
 
 /* Dropdown Button styles */
 .dropdownButton {
-    display: none;
-    background-color: var(--headerColor);
-    border: none;
-    color: var(--bodyColor);
-    font-size: 1.05em;
+    display: block;
     cursor: pointer;
-    position: absolute;
-    right: 10px; /* Adjust this value to position the button on the far right */
-    top: 10px; /* Adjust this value to align the button vertically */
+    position: relative;
 }
 
 .dropdown-content {
@@ -96,7 +93,7 @@ button {
     color: black;
 }
 
-/* Media query for smaller screens */
+/* Media query for smaller screens 
 @media (max-width: 520px) {
     .button-container {
         display: none;
@@ -105,7 +102,7 @@ button {
     .dropdownButton {
         display: block;
     }
-}
+}*/
 
 /* END of dropdown code */
 

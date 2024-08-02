@@ -3,56 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Karen's Cornhole</title>
+    <title>Cornhole</title>
     <link rel="icon" type="image/png" href="./images/browserIcon.png">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="button-container">
-            <a href="index.html">
-                <button class="headerButton">Home</button>
-            </a><a href="index.html">
-                <button class="headerButton">About</button>
-            </a><a href="index.html">
-                <button class="headerButton">Contact</button>
-            </a><a href="index.html">
-                <button class="headerButton">Services</button>
-            </a><a href="index.html">
-                <button class="headerButton" style="margin-right: 20px;">Cornhole Boards</button>
-            </a>
-        </div>
-        <button class="dropdownButton headerButton" onclick="toggleDropdown()">Menu</button>
-            <div class="dropdown-content">
-                <a href="index.html">Home</a>
-                <a href="index.html">About</a>
-                <a href="index.html">Contact</a>
-                <a href="index.html">Services</a>
-                <a href="index.html">Cornhole Boards</a>
-            </div>
-    </header>
+    <div id="header-container"></div>
+    <script src="script.js"></script>
 
     <main>
-        <!-- Note, add alt and title to images so disabilties don't cause dificulties -->
-        <img src="./images/karensCornholeLogo.png" class="responsive-image">
         <h3> Future Dev Notes: </h3>
             <ul>
-                <li>Make the dropdown always appear</li>
-                <li>Remove Home, About, and stuff bc thats in dropdown. 
-                    Instead, add useful information like "order" or "location" 
-                    or "Shipping" or "Products" to display what items can be 
-                    bought, and what the prices look like. Keep it minimal so 
-                    it can shrink with the screen resolution</li>
-                <li>Make the header bar change distance from left edge of 
-                    header to left edge of screen. Just so the buttons don't 
-                    space out tooo much</li>
-                <li></li>
-                <li></li>
+                <li>Make the dropdown 3 lines</li>
+                <li>Rearrange/Label Header</li>
+                    <ul>
+                        <li>Decide if Products and Order are the same and if to remove one</li>
+                    </ul>
+                <li>Add the alt or title to images and such for better user experience</li>
+                <li>For the items in the dropdown. When on that page, make them appear 
+                    on the top left of the header with the line over them</li>
                 <li></li>
                 <li></li>
                 <li></li>
             </ul>
     </main>
-    <script src="script.js"></script>
 </body>
 </html>
