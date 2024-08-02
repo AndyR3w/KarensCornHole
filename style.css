@@ -1,0 +1,34 @@
+:root {
+	--bodyColor: #ffffff;
+	--headerColor: #848484;
+}
+
+.button-container {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    width: calc(100% - 100px); /* Makes the header 100px smaller than the screen width */
+    padding: 10px;
+    background-color: var(--headerColor);
+    margin-left: 100px; /* the 100px missing from a few lines ago is account for by pushing the header to the right */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+body {
+    background-color: var(--bodyColor);
+}
+
+button {
+    white-space: nowrap; /* Stops the two word buttons from wrapping on small screens */
+}
