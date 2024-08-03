@@ -92,18 +92,6 @@ button {
     background-color: var(--bodyColor);
     color: black;
 }
-
-/* Media query for smaller screens 
-@media (max-width: 520px) {
-    .button-container {
-        display: none;
-    }
-
-    .dropdownButton {
-        display: block;
-    }
-}*/
-
 /* END of dropdown code */
 
 .responsive-image {

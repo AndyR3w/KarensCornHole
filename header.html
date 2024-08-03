@@ -1,20 +1,56 @@
 <header>
     <div class="button-container">
-        </a><a href="products.html">
+        <a href="index.html" id="currentPageLink">
+            <button class="headerButton" id="currentPageButton">Home</button>
+        </a>
+        <a href="products.html">
             <button class="headerButton">Products</button>
-        </a><a href="order.html">
+        </a>
+        <a href="order.html">
             <button class="headerButton">Order</button>
         </a>
     
         <button class="dropdownButton headerButton" style="margin-right: 20px;" onclick="toggleDropdown()">Menu</button>
-            <div class="dropdown-content">
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
-                <a href="services.html">Services</a>
-                <a href="boards.html">Boards</a>
-                <a href="shipEst.html">Shipping Estimations</a>
-            </div>
+        <div class="dropdown-content">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="services.html">Services</a>
+            <a href="boards.html">Boards</a>
+            <a href="shipEst.html">Shipping Estimations</a>
+        </div>
     </div>
 </header>
 <img src="./images/karensCornholeLogo.png" class="responsive-image">
+
+<!-- Inline script to update button title and link -->
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Map of page titles
+        var pageTitleMap = {
+            "index.html": "Home",
+            "about.html": "About",
+            "contact.html": "Contact",
+            "services.html": "Services",
+            "boards.html": "Boards",
+            "shipEst.html": "Shipping Estimations",
+            // Add other mappings as needed
+        };
+
+        // Get the current page name (i.e. index.html, about.html, etc.)
+        var currentPage = window.location.pathname.split("/").pop();
+        
+        // Get the button and link elements (the id of the buttons or links)
+        var currentPageButton = document.getElementById("currentPageButton");
+        var currentPageLink = document.getElementById("currentPageLink");
+
+        if (currentPageButton && currentPageLink) {
+            // Update the button text
+            var pageTitle = pageTitleMap[currentPage] || ""; //converts index.html to Home, About, etc.
+            currentPageButton.textContent = pageTitle;
+            
+            // Update the link href to the current page
+            currentPageLink.href = about.htmlcurrentPage;
+        }
+    });
+</script>
