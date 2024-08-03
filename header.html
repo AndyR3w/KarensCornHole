@@ -21,6 +21,7 @@
         </div>
     </div>
 </header>
+<div id="header-container"></div> <!--may delete-->
 <img src="./images/karensCornholeLogo.png" class="responsive-image">
 
 <!-- Inline script to update button title and link -->
@@ -39,18 +40,22 @@
 
         // Get the current page name (i.e. index.html, about.html, etc.)
         var currentPage = window.location.pathname.split("/").pop();
-        
+        console.log("Current Page:", currentPage); // Debugging line
+
         // Get the button and link elements (the id of the buttons or links)
         var currentPageButton = document.getElementById("currentPageButton");
         var currentPageLink = document.getElementById("currentPageLink");
-
+    
         if (currentPageButton && currentPageLink) {
             // Update the button text
             var pageTitle = pageTitleMap[currentPage] || ""; //converts index.html to Home, About, etc.
+            console.log("Page Title:", pageTitle); // Debugging line
+
             currentPageButton.textContent = pageTitle;
             
             // Update the link href to the current page
-            currentPageLink.href = about.htmlcurrentPage;
+            currentPageLink.href = currentPage;
+            console.log("Updated Link:", currentPageLink.href); // Debugging line
         }
     });
 </script>
